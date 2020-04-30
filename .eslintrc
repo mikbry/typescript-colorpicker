@@ -1,0 +1,83 @@
+{
+  "parser":  "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "plugins": [
+    "prettier",
+    "react",
+    "jest",
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+  },
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true,
+    "jquery": false,
+    "node": true
+  },
+  "ignorePatterns": ["**/dist", "node_modules/"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "arrow-body-style": ["error", "as-needed"],
+    "import/prefer-default-export": "off",
+    "react/prop-types": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.{ts,tsx}", "**/*.stories.tsx", "**/jest.setup.ts", "**/test/*.{ts,tsx}"],
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "prettier/prettier": ["error", {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "printWidth": 120
+    }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
+   "@typescript-eslint/explicit-function-return-type": "off",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+  }
+  },
+}
