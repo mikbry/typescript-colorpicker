@@ -1,5 +1,5 @@
 {
-  "parser":  "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -22,8 +22,7 @@
       "jsx": true
     }
   },
-  "globals": {
-  },
+  "globals": {},
   "env": {
     "browser": true,
     "es2020": true,
@@ -31,26 +30,40 @@
     "jquery": false,
     "node": true
   },
-  "ignorePatterns": ["**/dist", "node_modules/"],
+  "ignorePatterns": [
+    "**/dist",
+    "node_modules/"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "arrow-body-style": ["error", "as-needed"],
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
     "import/prefer-default-export": "off",
     "react/prop-types": 0,
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": ["**/*.test.{ts,tsx}", "**/*.stories.tsx", "**/jest.setup.ts", "**/test/*.{ts,tsx}"],
+        "devDependencies": [
+          "**/*.test.{ts,tsx}",
+          "**/*.stories.tsx",
+          "**/jest.setup.ts",
+          "**/test/*.{ts,tsx}"
+        ],
         "optionalDependencies": false,
         "peerDependencies": false
       }
     ],
-    "prettier/prettier": ["error", {
+    "prettier/prettier": [
+      "error",
+      {
         "trailingComma": "all",
         "singleQuote": true,
         "jsxSingleQuote": true,
         "printWidth": 120
-    }],
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -60,11 +73,18 @@
         "ts": "never",
         "tsx": "never"
       }
-   ],
-   "@typescript-eslint/explicit-function-return-type": "off",
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-filename-extension": [
       1,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
     ]
   },
   "settings": {
@@ -72,12 +92,20 @@
       "version": "detect"
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
     },
     "import/resolver": {
       "node": {
-          "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      },
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
   }
-  },
 }
