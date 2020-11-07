@@ -6,7 +6,7 @@ import blueGrey from '@material-ui/core/colors/blueGrey';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { ColorPicker } from 'material-ui-color';
+import { ColorPicker, useTranslate } from 'material-ui-color';
 
 const theme = createMuiTheme({
   palette: {
@@ -22,6 +22,7 @@ const Home = () => {
     // setColor(newValue);
     // action('changed')(newValue);
   };
+  const { t } = useTranslate();
   return <ThemeProvider theme={theme}>
   <CssBaseline />
   <Container maxWidth="sm">
